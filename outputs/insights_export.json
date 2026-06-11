@@ -1,0 +1,1024 @@
+{
+  "U1": {
+    "persona": {
+      "label": "Consistent Performer",
+      "description": "Maintains stable, high-quality behavioral patterns across sleep, activity, and deep work. Low volatility and high reliability."
+    },
+    "feature_summary": {
+      "sleep_consistency": 0.542,
+      "activity_consistency": 0.283,
+      "productivity_score": 0.65,
+      "behavioral_volatility": 0.809,
+      "exercise_adherence": 0.569,
+      "screen_time_trend": -0.061,
+      "recovery_score": 0.74,
+      "behavioral_stability_score": 0.71
+    },
+    "insights": [
+      {
+        "type": "pattern",
+        "title": "Decreasing daily steps",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.206,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 8298.71 to 7426.00",
+            "metric": "steps",
+            "value": 7426.0,
+            "baseline": 8298.714285714286,
+            "delta": -872.7142857142862
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing screen time",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.188,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 7.00 to 5.67",
+            "metric": "screen_time_hours",
+            "value": 5.671428571428572,
+            "baseline": 6.999999999999999,
+            "delta": -1.3285714285714274
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing deep work",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.167,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 3.67 to 3.50",
+            "metric": "deep_work_hours",
+            "value": 3.5,
+            "baseline": 3.6714285714285717,
+            "delta": -0.1714285714285717
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing exercise",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.103,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 46.00 to 34.86",
+            "metric": "exercise_minutes",
+            "value": 34.857142857142854,
+            "baseline": 46.0,
+            "delta": -11.142857142857146
+          }
+        ]
+      },
+      {
+        "type": "anomaly",
+        "title": "Anomaly: deep_work_hours on 2026-01-14",
+        "description": "Patterns suggest an anomaly in deep work hours on 2026-01-14, with a notable deviation from the personal baseline. The data indicates 0.6 hours of deep work, which appears associated with a significant drop from the average of 3.9 hours. Given the confidence score of 0.51, the insight is provided with limited certainty.",
+        "confidence": 0.505,
+        "confidence_tier": "medium",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "z-score = -2.02 (threshold: \u00b12.0). Deviation from baseline: -3.29 units (-84.6%). |z| = 2.02 \u2192 severity: low.",
+            "metric": "deep_work_hours",
+            "value": 0.6,
+            "baseline": 3.89,
+            "delta": -3.29
+          }
+        ]
+      },
+      {
+        "type": "anomaly",
+        "title": "Anomaly: steps on 2026-01-20",
+        "description": "Patterns suggest that the individual's daily step count on 2026-01-20 appears associated with an unusually high level of physical activity, exceeding their personal baseline by 44%. The deviation from the baseline may indicate a notable increase in movement on this day. Given the confidence score of 0.51, the certainty of this insight is limited.",
+        "confidence": 0.512,
+        "confidence_tier": "medium",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "z-score = 2.05 (threshold: \u00b12.0). Deviation from baseline: +3568.75 units (+43.9%). |z| = 2.05 \u2192 severity: low.",
+            "metric": "steps",
+            "value": 11693.0,
+            "baseline": 8124.25,
+            "delta": 3568.75
+          }
+        ]
+      },
+      {
+        "type": "correlation",
+        "title": "Correlation: behavioral_volatility \u2194 productivity_score",
+        "description": "Patterns suggest that higher behavioral volatility appears associated with lower productivity score, although the relationship is characterized by a weak-to-moderate association. With a correlation coefficient of -0.40, this insight is based on limited certainty. The data may indicate a potential link between behavioral volatility and productivity, but the confidence in this finding is limited due to a low confidence score of 0.40.",
+        "confidence": 0.404,
+        "confidence_tier": "low",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "Patterns suggest higher behavioral volatility appears associated with lower productivity score. (weak-to-moderate association, r=-0.40)",
+            "metric": "behavioral_volatility\u2194productivity_score",
+            "value": -0.404,
+            "baseline": 0.0,
+            "delta": -0.404
+          }
+        ]
+      }
+    ],
+    "anomaly_summary": [
+      {
+        "date": "2026-01-14",
+        "metric": "deep_work_hours",
+        "z_score": -2.02,
+        "severity": "low",
+        "reason": "Unusually low deep work hours: 0.6 vs personal baseline of 3.9 (85% below average)."
+      },
+      {
+        "date": "2026-01-20",
+        "metric": "steps",
+        "z_score": 2.05,
+        "severity": "low",
+        "reason": "Unusually high daily steps: 11693.0 vs personal baseline of 8124.2 (44% above average)."
+      }
+    ],
+    "pattern_summary": [
+      {
+        "name": "Decreasing daily steps",
+        "metric": "steps",
+        "direction": "decreasing",
+        "r_squared": 0.03621102623841104,
+        "week_delta_pct": -11.685660018993353
+      },
+      {
+        "name": "Decreasing screen time",
+        "metric": "screen_time_hours",
+        "direction": "decreasing",
+        "r_squared": 0.023649102388965875,
+        "week_delta_pct": -31.32387706855792
+      },
+      {
+        "name": "Decreasing deep work",
+        "metric": "deep_work_hours",
+        "direction": "decreasing",
+        "r_squared": 0.0081003894620891,
+        "week_delta_pct": 2.941176470588238
+      },
+      {
+        "name": "Decreasing exercise",
+        "metric": "exercise_minutes",
+        "direction": "decreasing",
+        "r_squared": 0.002999530693405409,
+        "week_delta_pct": -27.490039840637444
+      }
+    ]
+  },
+  "U2": {
+    "persona": {
+      "label": "Consistent Performer",
+      "description": "Maintains stable, high-quality behavioral patterns across sleep, activity, and deep work. Low volatility and high reliability."
+    },
+    "feature_summary": {
+      "sleep_consistency": 0.532,
+      "activity_consistency": 0.313,
+      "productivity_score": 0.596,
+      "behavioral_volatility": 0.764,
+      "exercise_adherence": 0.686,
+      "screen_time_trend": 0.062,
+      "recovery_score": 0.792,
+      "behavioral_stability_score": 0.728
+    },
+    "insights": [
+      {
+        "type": "pattern",
+        "title": "Increasing daily steps",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.211,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 8933.29 to 9402.57",
+            "metric": "steps",
+            "value": 9402.57142857143,
+            "baseline": 8933.285714285714,
+            "delta": 469.2857142857156
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing sleep duration",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.255,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 7.53 to 7.20",
+            "metric": "sleep_hours",
+            "value": 7.2,
+            "baseline": 7.528571428571428,
+            "delta": -0.3285714285714274
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing screen time",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.217,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 5.43 to 6.26",
+            "metric": "screen_time_hours",
+            "value": 6.257142857142857,
+            "baseline": 5.428571428571429,
+            "delta": 0.8285714285714283
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing deep work",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.144,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 2.39 to 2.70",
+            "metric": "deep_work_hours",
+            "value": 2.6999999999999997,
+            "baseline": 2.3857142857142857,
+            "delta": 0.31428571428571406
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing exercise",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.164,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 36.57 to 55.57",
+            "metric": "exercise_minutes",
+            "value": 55.57142857142857,
+            "baseline": 36.57142857142857,
+            "delta": 19.0
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing recovery score",
+        "description": "Patterns suggest that the recovery score is increasing over time, with a 7-day average change from 0.69 to 0.92. This trend appears associated with a moderate strength of relationship, as indicated by an R\u00b2 value of 0.52. However, due to the limited certainty of this finding, with a confidence score of 0.45, these observations should be interpreted with caution.",
+        "confidence": 0.447,
+        "confidence_tier": "low",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.69 to 0.92",
+            "metric": "recovery_score",
+            "value": 0.9207397959183673,
+            "baseline": 0.6861224489795917,
+            "delta": 0.23461734693877556
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing behavioral stability",
+        "description": "Patterns suggest that behavioral stability is increasing over time, as indicated by a positive slope of 0.0032 and a moderate R\u00b2 value of 0.62. The 7-day average has shifted from 0.69 to 0.76, which may indicate a trend towards more stable behavior. However, with a confidence score of 0.51, the certainty of this observation is limited.",
+        "confidence": 0.513,
+        "confidence_tier": "medium",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.69 to 0.76",
+            "metric": "behavioral_stability_score",
+            "value": 0.7553229156333003,
+            "baseline": 0.6924386495388474,
+            "delta": 0.06288426609445297
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Recovery Phase",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.128,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "Sleep: 6.8h \u2192 7.2h; Exercise: 53 \u2192 56 min",
+            "metric": "composite",
+            "value": 7.2,
+            "baseline": 6.8,
+            "delta": 0.40000000000000036
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Behavioral Stabilization",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.264,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "Mean stability score over last 7 days: 0.76",
+            "metric": "behavioral_stability_score",
+            "value": 0.7553229156333003,
+            "baseline": 0.7,
+            "delta": 0.055322915633300385
+          }
+        ]
+      },
+      {
+        "type": "anomaly",
+        "title": "Anomaly: steps on 2026-01-10",
+        "description": "Patterns suggest a behavioral anomaly on 2026-01-10, as the individual's daily steps were 50% below their personal baseline, with a z-score of -2.04 indicating a notable deviation. This deviation may indicate a change in the individual's typical behavior. Given the confidence score of 0.51, the certainty of this insight is limited, and the findings should be interpreted with caution.",
+        "confidence": 0.51,
+        "confidence_tier": "medium",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "z-score = -2.04 (threshold: \u00b12.0). Deviation from baseline: -4350.80 units (-49.9%). |z| = 2.04 \u2192 severity: low.",
+            "metric": "steps",
+            "value": 4362.0,
+            "baseline": 8712.8,
+            "delta": -4350.799999999999
+          }
+        ]
+      },
+      {
+        "type": "correlation",
+        "title": "Correlation: exercise_minutes \u2194 productivity_score",
+        "description": "Patterns suggest that exercise minutes may be associated with higher productivity scores, although the relationship appears to be weak to moderate. With a correlation coefficient of 0.48, this finding is based on limited certainty. The data may indicate a potential link between exercise and productivity, but the association is not strongly established due to the low confidence score.",
+        "confidence": 0.483,
+        "confidence_tier": "low",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "Patterns suggest exercise minutes may be associated with higher productivity score. (weak-to-moderate association, r=0.48)",
+            "metric": "exercise_minutes\u2194productivity_score",
+            "value": 0.483,
+            "baseline": 0.0,
+            "delta": 0.483
+          }
+        ]
+      }
+    ],
+    "anomaly_summary": [
+      {
+        "date": "2026-01-10",
+        "metric": "steps",
+        "z_score": -2.04,
+        "severity": "low",
+        "reason": "Unusually low daily steps: 4362.0 vs personal baseline of 8712.8 (50% below average)."
+      }
+    ],
+    "pattern_summary": [
+      {
+        "name": "Increasing daily steps",
+        "metric": "steps",
+        "direction": "increasing",
+        "r_squared": 0.00839385260911141,
+        "week_delta_pct": -9.870154866601524
+      },
+      {
+        "name": "Decreasing sleep duration",
+        "metric": "sleep_hours",
+        "direction": "decreasing",
+        "r_squared": 0.028890994036909284,
+        "week_delta_pct": -11.811023622047218
+      },
+      {
+        "name": "Increasing screen time",
+        "metric": "screen_time_hours",
+        "direction": "increasing",
+        "r_squared": 0.0664245207223852,
+        "week_delta_pct": 1.7730496453900795
+      },
+      {
+        "name": "Increasing deep work",
+        "metric": "deep_work_hours",
+        "direction": "increasing",
+        "r_squared": 0.00921060040206846,
+        "week_delta_pct": -33.64928909952605
+      },
+      {
+        "name": "Increasing exercise",
+        "metric": "exercise_minutes",
+        "direction": "increasing",
+        "r_squared": 0.07061381585753165,
+        "week_delta_pct": -55.48245614035088
+      },
+      {
+        "name": "Increasing recovery score",
+        "metric": "recovery_score",
+        "direction": "increasing",
+        "r_squared": 0.5204743867755304,
+        "week_delta_pct": -10.70157530278369
+      },
+      {
+        "name": "Increasing behavioral stability",
+        "metric": "behavioral_stability_score",
+        "direction": "increasing",
+        "r_squared": 0.6234471109269403,
+        "week_delta_pct": -2.6175045421971737
+      },
+      {
+        "name": "Recovery Phase",
+        "metric": "composite",
+        "direction": "increasing",
+        "r_squared": 0.0,
+        "week_delta_pct": 5.882352941176476
+      },
+      {
+        "name": "Behavioral Stabilization",
+        "metric": "behavioral_stability_score",
+        "direction": "stable",
+        "r_squared": 0.0,
+        "week_delta_pct": 0.0
+      }
+    ]
+  },
+  "U3": {
+    "persona": {
+      "label": "Consistent Performer",
+      "description": "Maintains stable, high-quality behavioral patterns across sleep, activity, and deep work. Low volatility and high reliability."
+    },
+    "feature_summary": {
+      "sleep_consistency": 0.549,
+      "activity_consistency": 0.322,
+      "productivity_score": 0.564,
+      "behavioral_volatility": 0.775,
+      "exercise_adherence": 0.709,
+      "screen_time_trend": -0.051,
+      "recovery_score": 0.797,
+      "behavioral_stability_score": 0.737
+    },
+    "insights": [
+      {
+        "type": "pattern",
+        "title": "Decreasing daily steps",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.209,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 7760.29 to 7060.57",
+            "metric": "steps",
+            "value": 7060.571428571428,
+            "baseline": 7760.285714285715,
+            "delta": -699.7142857142862
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing sleep duration",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.311,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 6.27 to 7.19",
+            "metric": "sleep_hours",
+            "value": 7.185714285714286,
+            "baseline": 6.271428571428572,
+            "delta": 0.9142857142857137
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing screen time",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.178,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 5.50 to 5.11",
+            "metric": "screen_time_hours",
+            "value": 5.114285714285714,
+            "baseline": 5.5,
+            "delta": -0.3857142857142861
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing deep work",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.208,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 3.93 to 2.10",
+            "metric": "deep_work_hours",
+            "value": 2.1,
+            "baseline": 3.9285714285714284,
+            "delta": -1.8285714285714283
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing exercise",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.148,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 52.71 to 48.14",
+            "metric": "exercise_minutes",
+            "value": 48.142857142857146,
+            "baseline": 52.714285714285715,
+            "delta": -4.571428571428569
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing productivity score",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.262,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.65 to 0.45",
+            "metric": "productivity_score",
+            "value": 0.44535238095238094,
+            "baseline": 0.6515333333333334,
+            "delta": -0.20618095238095246
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing behavioral stability",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.342,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.78 to 0.73",
+            "metric": "behavioral_stability_score",
+            "value": 0.7279636545702937,
+            "baseline": 0.777789545455602,
+            "delta": -0.04982589088530831
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Behavioral Stabilization",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.261,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "Mean stability score over last 7 days: 0.73",
+            "metric": "behavioral_stability_score",
+            "value": 0.7279636545702937,
+            "baseline": 0.7,
+            "delta": 0.027963654570293706
+          }
+        ]
+      }
+    ],
+    "anomaly_summary": [],
+    "pattern_summary": [
+      {
+        "name": "Decreasing daily steps",
+        "metric": "steps",
+        "direction": "decreasing",
+        "r_squared": 0.019756038562024285,
+        "week_delta_pct": -28.245821843016046
+      },
+      {
+        "name": "Increasing sleep duration",
+        "metric": "sleep_hours",
+        "direction": "increasing",
+        "r_squared": 0.17178337539250735,
+        "week_delta_pct": 3.7037037037036904
+      },
+      {
+        "name": "Decreasing screen time",
+        "metric": "screen_time_hours",
+        "direction": "decreasing",
+        "r_squared": 0.00852799581625364,
+        "week_delta_pct": -36.70212765957447
+      },
+      {
+        "name": "Decreasing deep work",
+        "metric": "deep_work_hours",
+        "direction": "decreasing",
+        "r_squared": 0.16766223744322367,
+        "week_delta_pct": -63.541666666666664
+      },
+      {
+        "name": "Increasing exercise",
+        "metric": "exercise_minutes",
+        "direction": "increasing",
+        "r_squared": 0.0031486617051125136,
+        "week_delta_pct": 42.42902208201893
+      },
+      {
+        "name": "Decreasing productivity score",
+        "metric": "productivity_score",
+        "direction": "decreasing",
+        "r_squared": 0.17315482521534722,
+        "week_delta_pct": -46.45797314366082
+      },
+      {
+        "name": "Decreasing behavioral stability",
+        "metric": "behavioral_stability_score",
+        "direction": "decreasing",
+        "r_squared": 0.20265541925582933,
+        "week_delta_pct": -0.6882485037310546
+      },
+      {
+        "name": "Behavioral Stabilization",
+        "metric": "behavioral_stability_score",
+        "direction": "stable",
+        "r_squared": 0.0,
+        "week_delta_pct": 0.0
+      }
+    ]
+  },
+  "U4": {
+    "persona": {
+      "label": "Consistent Performer",
+      "description": "Maintains stable, high-quality behavioral patterns across sleep, activity, and deep work. Low volatility and high reliability."
+    },
+    "feature_summary": {
+      "sleep_consistency": 0.489,
+      "activity_consistency": 0.315,
+      "productivity_score": 0.599,
+      "behavioral_volatility": 0.776,
+      "exercise_adherence": 0.52,
+      "screen_time_trend": -0.015,
+      "recovery_score": 0.717,
+      "behavioral_stability_score": 0.711
+    },
+    "insights": [
+      {
+        "type": "pattern",
+        "title": "Increasing daily steps",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.264,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 7116.71 to 9763.86",
+            "metric": "steps",
+            "value": 9763.857142857143,
+            "baseline": 7116.714285714285,
+            "delta": 2647.142857142858
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing sleep duration",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.246,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 6.67 to 6.99",
+            "metric": "sleep_hours",
+            "value": 6.985714285714287,
+            "baseline": 6.671428571428572,
+            "delta": 0.31428571428571495
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Decreasing deep work",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.203,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 3.71 to 1.93",
+            "metric": "deep_work_hours",
+            "value": 1.9285714285714286,
+            "baseline": 3.7142857142857144,
+            "delta": -1.7857142857142858
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing exercise",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.099,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 31.86 to 33.14",
+            "metric": "exercise_minutes",
+            "value": 33.142857142857146,
+            "baseline": 31.857142857142858,
+            "delta": 1.2857142857142883
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing recovery score",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.338,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.64 to 0.83",
+            "metric": "recovery_score",
+            "value": 0.8253188775510204,
+            "baseline": 0.640701530612245,
+            "delta": 0.1846173469387754
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing behavioral stability",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.325,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.70 to 0.73",
+            "metric": "behavioral_stability_score",
+            "value": 0.7323985766840911,
+            "baseline": 0.7030915305024232,
+            "delta": 0.029307046181667906
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Behavioral Stabilization",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.266,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "Mean stability score over last 7 days: 0.73",
+            "metric": "behavioral_stability_score",
+            "value": 0.7323985766840911,
+            "baseline": 0.7,
+            "delta": 0.032398576684091185
+          }
+        ]
+      },
+      {
+        "type": "correlation",
+        "title": "Correlation: exercise_minutes \u2194 sleep_hours",
+        "description": "Patterns suggest that exercise minutes may be associated with higher sleep hours, although the relationship appears to be weak to moderate. With a correlation coefficient of 0.54, this finding has limited certainty. The data may indicate a potential link between exercise and sleep, but the association is not strongly defined due to the relatively low confidence score.",
+        "confidence": 0.535,
+        "confidence_tier": "medium",
+        "abstained": false,
+        "evidence": [
+          {
+            "description": "Patterns suggest exercise minutes may be associated with higher sleep hours. (weak-to-moderate association, r=0.54)",
+            "metric": "exercise_minutes\u2194sleep_hours",
+            "value": 0.535,
+            "baseline": 0.0,
+            "delta": 0.535
+          }
+        ]
+      }
+    ],
+    "anomaly_summary": [],
+    "pattern_summary": [
+      {
+        "name": "Increasing daily steps",
+        "metric": "steps",
+        "direction": "increasing",
+        "r_squared": 0.16224888677199,
+        "week_delta_pct": 8.96190726186248
+      },
+      {
+        "name": "Increasing sleep duration",
+        "metric": "sleep_hours",
+        "direction": "increasing",
+        "r_squared": 0.014087669548931274,
+        "week_delta_pct": -7.2124756335282525
+      },
+      {
+        "name": "Decreasing deep work",
+        "metric": "deep_work_hours",
+        "direction": "decreasing",
+        "r_squared": 0.12233284654385672,
+        "week_delta_pct": -13.580246913580238
+      },
+      {
+        "name": "Increasing exercise",
+        "metric": "exercise_minutes",
+        "direction": "increasing",
+        "r_squared": 4.658953811644182e-05,
+        "week_delta_pct": -3.488372093023256
+      },
+      {
+        "name": "Increasing recovery score",
+        "metric": "recovery_score",
+        "direction": "increasing",
+        "r_squared": 0.25074621041962075,
+        "week_delta_pct": -3.368328958880123
+      },
+      {
+        "name": "Increasing behavioral stability",
+        "metric": "behavioral_stability_score",
+        "direction": "increasing",
+        "r_squared": 0.14644488916993434,
+        "week_delta_pct": 5.4779283183467395
+      },
+      {
+        "name": "Behavioral Stabilization",
+        "metric": "behavioral_stability_score",
+        "direction": "stable",
+        "r_squared": 0.0,
+        "week_delta_pct": 0.0
+      }
+    ]
+  },
+  "U5": {
+    "persona": {
+      "label": "Consistent Performer",
+      "description": "Maintains stable, high-quality behavioral patterns across sleep, activity, and deep work. Low volatility and high reliability."
+    },
+    "feature_summary": {
+      "sleep_consistency": 0.547,
+      "activity_consistency": 0.283,
+      "productivity_score": 0.614,
+      "behavioral_volatility": 0.823,
+      "exercise_adherence": 0.823,
+      "screen_time_trend": -0.044,
+      "recovery_score": 0.856,
+      "behavioral_stability_score": 0.743
+    },
+    "insights": [
+      {
+        "type": "pattern",
+        "title": "Decreasing daily steps",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.198,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 7332.71 to 7469.57",
+            "metric": "steps",
+            "value": 7469.571428571428,
+            "baseline": 7332.714285714285,
+            "delta": 136.85714285714312
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing deep work",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.189,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 3.29 to 4.10",
+            "metric": "deep_work_hours",
+            "value": 4.1,
+            "baseline": 3.2857142857142856,
+            "delta": 0.8142857142857141
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing exercise",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.183,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 53.29 to 58.71",
+            "metric": "exercise_minutes",
+            "value": 58.714285714285715,
+            "baseline": 53.285714285714285,
+            "delta": 5.428571428571431
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Increasing behavioral stability",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.379,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "7-day average changed from 0.73 to 0.75",
+            "metric": "behavioral_stability_score",
+            "value": 0.7536371381799748,
+            "baseline": 0.7264847555364591,
+            "delta": 0.027152382643515716
+          }
+        ]
+      },
+      {
+        "type": "pattern",
+        "title": "Behavioral Stabilization",
+        "description": "Insufficient evidence for reliable behavioral interpretation.",
+        "confidence": 0.264,
+        "confidence_tier": "low",
+        "abstained": true,
+        "evidence": [
+          {
+            "description": "Mean stability score over last 7 days: 0.75",
+            "metric": "behavioral_stability_score",
+            "value": 0.7536371381799748,
+            "baseline": 0.7,
+            "delta": 0.05363713817997484
+          }
+        ]
+      }
+    ],
+    "anomaly_summary": [],
+    "pattern_summary": [
+      {
+        "name": "Decreasing daily steps",
+        "metric": "steps",
+        "direction": "decreasing",
+        "r_squared": 0.004870347946636807,
+        "week_delta_pct": 6.9412844387511194
+      },
+      {
+        "name": "Increasing deep work",
+        "metric": "deep_work_hours",
+        "direction": "increasing",
+        "r_squared": 0.07746913469950659,
+        "week_delta_pct": 16.23616236162363
+      },
+      {
+        "name": "Increasing exercise",
+        "metric": "exercise_minutes",
+        "direction": "increasing",
+        "r_squared": 0.04579795433544525,
+        "week_delta_pct": 21.392405063291132
+      },
+      {
+        "name": "Increasing behavioral stability",
+        "metric": "behavioral_stability_score",
+        "direction": "increasing",
+        "r_squared": 0.28833039061648164,
+        "week_delta_pct": 5.622013757379263
+      },
+      {
+        "name": "Behavioral Stabilization",
+        "metric": "behavioral_stability_score",
+        "direction": "stable",
+        "r_squared": 0.0,
+        "week_delta_pct": 0.0
+      }
+    ]
+  }
+}

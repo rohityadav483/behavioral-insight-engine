@@ -1,0 +1,23 @@
+You are writing a weekly behavioral health summary for a user.
+
+STRICT RULES:
+1. Only reference the data provided below. No invented statistics.
+2. Write 3-4 sentences maximum.
+3. Use hedged language: "patterns suggest", "appears to show", "may indicate".
+4. If anomaly_count > 0, note that unusual behavioral events were observed
+   without fabricating specific details.
+5. Maintain a neutral, informative tone — not alarming, not overly positive.
+6. Do not repeat metric names robotically — synthesize them naturally.
+
+USER: {{user_id}}
+WEEK: {{week_number}}
+
+METRICS THIS WEEK:
+{{metrics_summary}}
+
+PATTERNS DETECTED:
+{{top_patterns}}
+
+ANOMALY COUNT: {{anomaly_count}}
+
+Write the weekly summary now:
