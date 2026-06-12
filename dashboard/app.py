@@ -222,7 +222,7 @@ def render_overview(user_data: dict, user_id: str) -> None:
     with col_a:
         st.markdown("#### 📉 Signal Overview (30 days)")
         fig = _sparkline_chart(edf)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col_b:
         st.markdown("#### 🪪 Current Persona")
@@ -329,7 +329,7 @@ def render_behavioral_scores(user_data: dict, user_id: str) -> None:
             plot_bgcolor="rgba(0,0,0,0)",
             title="Behavioral Feature Radar",
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col2:
         st.markdown("#### Feature Breakdown")
@@ -427,7 +427,7 @@ def render_trend_charts(user_data: dict, user_id: str) -> None:
     )
     fig.update_xaxes(showgrid=False)
     fig.update_yaxes(showgrid=True, gridcolor="rgba(128,128,128,0.15)")
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig, width="stretch")
 
     # Pattern summary for this metric
     patterns = [p for p in user_data.get("patterns", []) if p.metric == metric]
@@ -501,7 +501,7 @@ def render_anomaly_timeline(user_data: dict, user_id: str) -> None:
         fig.add_hline(y=2.0, line_dash="dot", line_color="gray", annotation_text="z=+2")
         fig.add_hline(y=-2.0, line_dash="dot", line_color="gray", annotation_text="z=-2")
         fig.update_layout(height=380, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
 
 # ── Weekly Reports ────────────────────────────────────────────────────────────
@@ -639,7 +639,7 @@ def render_persona(user_data: dict, user_id: str) -> None:
                 plot_bgcolor="rgba(0,0,0,0)",
                 coloraxis_showscale=False,
             )
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig, width="stretch")
 
 
 # ── Correlation Analysis ──────────────────────────────────────────────────────
@@ -675,7 +675,7 @@ def render_correlations(user_data: dict, user_id: str) -> None:
             paper_bgcolor="rgba(0,0,0,0)",
             plot_bgcolor="rgba(0,0,0,0)",
         )
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, width="stretch")
 
     with col2:
         st.markdown("#### Significant Correlations")
@@ -703,16 +703,34 @@ def render_correlations(user_data: dict, user_id: str) -> None:
         ya = st.selectbox("Y axis", signal_options, index=1)  # sleep_hours
 
     if xa and ya and xa != ya:
-        fig2 = px.scatter(
-            edf, x=xa, y=ya, trendline="ols",
-            color_discrete_sequence=["#6366f1"],
-            labels={xa: xa.replace("_", " ").title(), ya: ya.replace("_", " ").title()},
-            title=f"{xa.replace('_',' ').title()} vs {ya.replace('_',' ').title()}",
-        )
+        scatter_df = edf[[xa, ya]].dropna()
+        fig2 = go.Figure()
+        fig2.add_trace(go.Scatter(
+            x=scatter_df[xa], y=scatter_df[ya],
+            mode="markers",
+            marker=dict(color="#6366f1", size=7, opacity=0.75),
+            name="observations",
+        ))
+        # Manual numpy trendline — no statsmodels required
+        if len(scatter_df) >= 3:
+            coeffs = np.polyfit(scatter_df[xa].values, scatter_df[ya].values, 1)
+            x_line = np.linspace(scatter_df[xa].min(), scatter_df[xa].max(), 100)
+            y_line = np.polyval(coeffs, x_line)
+            fig2.add_trace(go.Scatter(
+                x=x_line, y=y_line,
+                mode="lines",
+                line=dict(color="#f59e0b", width=2, dash="dot"),
+                name="trend",
+            ))
         fig2.update_layout(
-            height=360, paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)"
+            title=f"{xa.replace('_',' ').title()} vs {ya.replace('_',' ').title()}",
+            xaxis_title=xa.replace("_", " ").title(),
+            yaxis_title=ya.replace("_", " ").title(),
+            height=360,
+            paper_bgcolor="rgba(0,0,0,0)",
+            plot_bgcolor="rgba(0,0,0,0)",
         )
-        st.plotly_chart(fig2, use_container_width=True)
+        st.plotly_chart(fig2, width="stretch")
 
 
 # ── Query Interface ───────────────────────────────────────────────────────────

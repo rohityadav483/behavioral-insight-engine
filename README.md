@@ -152,16 +152,28 @@ behavioral-insight-engine/
 
 ## Quick Start
 
-### 1. Clone and install
+### 1. Clone
 
 ```bash
 git clone <repo-url>
 cd behavioral-insight-engine
+```
 
+### 2. Create virtual environment
+
+```bash
+python -m venv venv
+source venv/bin/activate        # macOS / Linux
+# venv\Scripts\activate         # Windows
+```
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
 ```
 
-### 2. Configure API key (optional)
+### 4. Configure API key (optional)
 
 ```bash
 cp .env.example .env
@@ -170,23 +182,10 @@ cp .env.example .env
 
 > The system runs fully without a Groq key — AI narration is disabled and raw analytical descriptions are shown instead. All pattern detection, anomaly detection, and confidence scoring work without any API key.
 
-### 3. Run
+### 5. Run
 
 ```bash
-# Option A — unified entry point (runs pipeline + launches dashboard)
-python main.py
-
-# Option B — dashboard only (uses cached results if available)
 streamlit run dashboard/app.py
-
-# Option C — shell script
-./run.sh
-
-# Option D — make
-make run
-
-# Force re-run pipeline (clears cache)
-python main.py --refresh
 ```
 
 Dashboard opens at **http://localhost:8501**
@@ -430,19 +429,6 @@ Supporting: productivity_score=0.38, screen_time_trend=+0.12, sleep_consistency=
 
 ---
 
-## Future Improvements
-
-- **Longitudinal analysis** — patterns across months, not just 30 days
-- **Cross-user cohort analysis** — compare behavioral profiles across users
-- **Causal discovery** — with sufficient data, apply PC algorithm or DoWhy
-- **Streaming ingestion** — real-time behavioral data via websocket or Kafka
-- **Personalized thresholds** — learn per-user anomaly sensitivity from feedback
-- **Mobile export** — PDF report generation for sharing outside the dashboard
-- **Multi-modal data** — integrate heart rate, calendar events, or weather as covariates
-- **Alerting system** — push notifications when high-severity anomalies are detected
-
----
-
 ## Tech Stack
 
 | Layer | Technology |
@@ -455,7 +441,3 @@ Supporting: productivity_score=0.38, screen_time_trend=+0.12, sleep_consistency=
 | Entry point | Python 3.10+ |
 
 ---
-
-## License
-
-Built for Chronis AI/ML Engineer Assessment — Task A.
